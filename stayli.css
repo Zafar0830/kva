@@ -1,0 +1,62 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(21, 21, 51);
+}
+.box{
+  position: relative;
+  width: 100px;
+  height: 120px;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.box h1{
+  color: white;
+  font-size: 25px;
+  
+}
+.box::before{
+  content: "";
+  position: absolute;
+  display: flex;
+  width: 60px;
+  height: 180px;
+  background: linear-gradient(#00ccff,#d400d4);
+  animation-name: Zafar ;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+
+  
+}
+.box::after{
+  content: "";
+  position: absolute;
+  display: flex;
+  width:95px;
+  height: 115px;
+  background-color: black;
+}
+h1{
+  z-index: 1;
+}
+@keyframes Zafar{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
